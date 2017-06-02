@@ -12,38 +12,104 @@
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <!--Si hago un CSS va aquí-->
+    <link type="text/css" rel="stylesheet" href="css/styles.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   </head>
 
   <body>
 
-    <div class="row">
-       <form class="col s12">
-         <div class="row">
-           <div class="input-field col s6">
-             <i class="material-icons prefix">account_circle</i>
-             <input id="icon_prefix" type="text" class="validate">
-             <label for="icon_prefix">Nombre:</label>
-           </div>
-           <div class="input-field col s6">
-             <i class="material-icons prefix">phone</i>
-             <input id="icon_telephone" type="tel" class="validate">
-             <label for="icon_telephone">Teléfono:</label>
-           </div>
-         </div>
-       </form>
-     </div>
+    <!-- Contenedor para la Barra de Navegación -->
+    <!-- <section class="container">
+      <nav class="row" id="miBarra">
+          <div class="nav-wrapper col s6" >
+            <a href="#!" class="brand-logo"><i class="material-icons">contact_phone</i>Contactos de Josh</a>
 
-     <div class="row">
-       <form class="col s12">
-         <div class="row">
-           <div class="input-field col s12">
-             <textarea id="textarea1" class="materialize-textarea"></textarea>
-             <label for="textarea1">Tus contactos:</label>
+              <!-- Con esto quiero poner la barra de busqueda en el NAV  -->
+                <!-- <div class="nav-wrapper col s6">
+                  <form>
+                    <div class="input-field">
+                      <input id="search" type="search" required>
+                      <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                      <i class="material-icons">close</i>
+                    </div>
+                  </form>
+                </div>
+          </div>
+        </nav>
+    </section> -->
+
+    <div class="navbar-fixed">
+      <nav id="miBarra">
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo">Contactos</a>
+          <form class="">
+            <!-- Botón para agregar contactos -->
+                <a class="btn-floating btn-large waves-effect waves-light pink right input-field" href="#modal1"><i class="material-icons">add</i></a>
+            <!-- Barra para buscar contactos -->
+            <div class="right input-field">
+              <input id="search" type="search" required>
+              <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+              <i class="material-icons">close</i>
+            </div>
+          </form>
+      </nav>
+    </div>
+
+
+
+  <!-- Contenedor para agregar contactos -->
+      <!-- <a class="btn-floating btn-large waves-effect waves-light pink" href="#modal1"><i class="material-icons">add</i></a> -->
+
+
+
+  <!-- Construyendo el MODAL -->
+
+      <!-- Modal Structure -->
+      <div id="modal1" class="modal">
+        <div class="modal-content">
+            <section class="container">
+              <div class="row">
+                 <form class="col s12">
+                   <div class="row">
+                     <div class="input-field col s6">
+                       <i class="material-icons prefix">account_circle</i>
+                       <input id="icon_prefix" type="text" class="validate">
+                       <label for="icon_prefix">Nombre:</label>
+                     </div>
+                   </div>
+
+              <div class="row">
+                  <div class="input-field col s6">
+                    <i class="material-icons prefix">phone</i>
+                    <input id="icon_telephone" type="tel" class="validate">
+                    <label for="icon_telephone">Teléfono:</label>
+                  </div>
+                </div>
+                </form>
+              </div>
+            </section>
+        </div>
+
+        <div class="modal-footer">
+          <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+        </div>
+      </div>
+
+
+    <!-- Contenedor para poner mis contactos guardados -->
+    <section class="container">
+       <div class="row">
+         <form class="col s12">
+           <div class="row">
+             <div class="input-field col s12">
+               <textarea id="textarea1" class="materialize-textarea"></textarea>
+               <label for="textarea1">Tus contactos:</label>
+             </div>
            </div>
-         </div>
-       </form>
-     </div>
+         </form>
+       </div>
+     </section>
 
 
 
@@ -51,8 +117,8 @@
     <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
-    <!--Si trabajo algo en JS aquí va-->
-
+    <!--Trabajando para el modal en JS aquí va-->
+    <script type="text/javascript" src="js/app.js"></script>
   </body>
 
 </html>
